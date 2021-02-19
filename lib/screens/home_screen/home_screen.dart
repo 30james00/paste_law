@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paste_law/screens/home_screen/components/home_form.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('Paste Law'),
       ),
       body: Container(
-        child: Text('Paste Law')
+        child: HomeForm(),
       ),
     );
   }
