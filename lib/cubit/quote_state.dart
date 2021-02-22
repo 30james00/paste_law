@@ -1,11 +1,7 @@
 part of 'quote_cubit.dart';
 
-@immutable
-abstract class QuoteState {}
-
-class QuoteInitial extends QuoteState {}
-
-class QuoteCreated extends QuoteState {
-  final String quote;
-  QuoteCreated(this.quote);
+@freezed
+abstract class QuoteState with _$QuoteState {
+  const factory QuoteState.inital() = _QuoteInitial;
+  const factory QuoteState.created(String quote) = _QuoteCreated;
 }
