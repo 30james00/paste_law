@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:window_size/window_size.dart';
@@ -12,7 +13,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   //set window constraints
-  if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
+  if (!kIsWeb) if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
     setWindowTitle('PasteLaw');
     setWindowMaxSize(const Size(500, 1000));
     setWindowMinSize(const Size(235, 430));
