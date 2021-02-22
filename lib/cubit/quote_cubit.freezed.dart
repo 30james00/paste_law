@@ -14,13 +14,13 @@ class _$QuoteStateTearOff {
   const _$QuoteStateTearOff();
 
 // ignore: unused_element
-  _QuoteInitial inital() {
-    return const _QuoteInitial();
+  QuoteInitial inital() {
+    return const QuoteInitial();
   }
 
 // ignore: unused_element
-  _QuoteCreated created(String quote) {
-    return _QuoteCreated(
+  QuoteCreated created(String quote) {
+    return QuoteCreated(
       quote,
     );
   }
@@ -45,13 +45,13 @@ mixin _$QuoteState {
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult inital(_QuoteInitial value),
-    @required TResult created(_QuoteCreated value),
+    @required TResult inital(QuoteInitial value),
+    @required TResult created(QuoteCreated value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult inital(_QuoteInitial value),
-    TResult created(_QuoteCreated value),
+    TResult inital(QuoteInitial value),
+    TResult created(QuoteCreated value),
     @required TResult orElse(),
   });
 }
@@ -73,26 +73,26 @@ class _$QuoteStateCopyWithImpl<$Res> implements $QuoteStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$QuoteInitialCopyWith<$Res> {
-  factory _$QuoteInitialCopyWith(
-          _QuoteInitial value, $Res Function(_QuoteInitial) then) =
-      __$QuoteInitialCopyWithImpl<$Res>;
+abstract class $QuoteInitialCopyWith<$Res> {
+  factory $QuoteInitialCopyWith(
+          QuoteInitial value, $Res Function(QuoteInitial) then) =
+      _$QuoteInitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$QuoteInitialCopyWithImpl<$Res> extends _$QuoteStateCopyWithImpl<$Res>
-    implements _$QuoteInitialCopyWith<$Res> {
-  __$QuoteInitialCopyWithImpl(
-      _QuoteInitial _value, $Res Function(_QuoteInitial) _then)
-      : super(_value, (v) => _then(v as _QuoteInitial));
+class _$QuoteInitialCopyWithImpl<$Res> extends _$QuoteStateCopyWithImpl<$Res>
+    implements $QuoteInitialCopyWith<$Res> {
+  _$QuoteInitialCopyWithImpl(
+      QuoteInitial _value, $Res Function(QuoteInitial) _then)
+      : super(_value, (v) => _then(v as QuoteInitial));
 
   @override
-  _QuoteInitial get _value => super._value as _QuoteInitial;
+  QuoteInitial get _value => super._value as QuoteInitial;
 }
 
 /// @nodoc
-class _$_QuoteInitial with DiagnosticableTreeMixin implements _QuoteInitial {
-  const _$_QuoteInitial();
+class _$QuoteInitial with DiagnosticableTreeMixin implements QuoteInitial {
+  const _$QuoteInitial();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -107,7 +107,7 @@ class _$_QuoteInitial with DiagnosticableTreeMixin implements _QuoteInitial {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _QuoteInitial);
+    return identical(this, other) || (other is QuoteInitial);
   }
 
   @override
@@ -141,8 +141,8 @@ class _$_QuoteInitial with DiagnosticableTreeMixin implements _QuoteInitial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult inital(_QuoteInitial value),
-    @required TResult created(_QuoteCreated value),
+    @required TResult inital(QuoteInitial value),
+    @required TResult created(QuoteCreated value),
   }) {
     assert(inital != null);
     assert(created != null);
@@ -152,8 +152,8 @@ class _$_QuoteInitial with DiagnosticableTreeMixin implements _QuoteInitial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult inital(_QuoteInitial value),
-    TResult created(_QuoteCreated value),
+    TResult inital(QuoteInitial value),
+    TResult created(QuoteCreated value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -164,41 +164,41 @@ class _$_QuoteInitial with DiagnosticableTreeMixin implements _QuoteInitial {
   }
 }
 
-abstract class _QuoteInitial implements QuoteState {
-  const factory _QuoteInitial() = _$_QuoteInitial;
+abstract class QuoteInitial implements QuoteState {
+  const factory QuoteInitial() = _$QuoteInitial;
 }
 
 /// @nodoc
-abstract class _$QuoteCreatedCopyWith<$Res> {
-  factory _$QuoteCreatedCopyWith(
-          _QuoteCreated value, $Res Function(_QuoteCreated) then) =
-      __$QuoteCreatedCopyWithImpl<$Res>;
+abstract class $QuoteCreatedCopyWith<$Res> {
+  factory $QuoteCreatedCopyWith(
+          QuoteCreated value, $Res Function(QuoteCreated) then) =
+      _$QuoteCreatedCopyWithImpl<$Res>;
   $Res call({String quote});
 }
 
 /// @nodoc
-class __$QuoteCreatedCopyWithImpl<$Res> extends _$QuoteStateCopyWithImpl<$Res>
-    implements _$QuoteCreatedCopyWith<$Res> {
-  __$QuoteCreatedCopyWithImpl(
-      _QuoteCreated _value, $Res Function(_QuoteCreated) _then)
-      : super(_value, (v) => _then(v as _QuoteCreated));
+class _$QuoteCreatedCopyWithImpl<$Res> extends _$QuoteStateCopyWithImpl<$Res>
+    implements $QuoteCreatedCopyWith<$Res> {
+  _$QuoteCreatedCopyWithImpl(
+      QuoteCreated _value, $Res Function(QuoteCreated) _then)
+      : super(_value, (v) => _then(v as QuoteCreated));
 
   @override
-  _QuoteCreated get _value => super._value as _QuoteCreated;
+  QuoteCreated get _value => super._value as QuoteCreated;
 
   @override
   $Res call({
     Object quote = freezed,
   }) {
-    return _then(_QuoteCreated(
+    return _then(QuoteCreated(
       quote == freezed ? _value.quote : quote as String,
     ));
   }
 }
 
 /// @nodoc
-class _$_QuoteCreated with DiagnosticableTreeMixin implements _QuoteCreated {
-  const _$_QuoteCreated(this.quote) : assert(quote != null);
+class _$QuoteCreated with DiagnosticableTreeMixin implements QuoteCreated {
+  const _$QuoteCreated(this.quote) : assert(quote != null);
 
   @override
   final String quote;
@@ -219,7 +219,7 @@ class _$_QuoteCreated with DiagnosticableTreeMixin implements _QuoteCreated {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _QuoteCreated &&
+        (other is QuoteCreated &&
             (identical(other.quote, quote) ||
                 const DeepCollectionEquality().equals(other.quote, quote)));
   }
@@ -230,8 +230,8 @@ class _$_QuoteCreated with DiagnosticableTreeMixin implements _QuoteCreated {
 
   @JsonKey(ignore: true)
   @override
-  _$QuoteCreatedCopyWith<_QuoteCreated> get copyWith =>
-      __$QuoteCreatedCopyWithImpl<_QuoteCreated>(this, _$identity);
+  $QuoteCreatedCopyWith<QuoteCreated> get copyWith =>
+      _$QuoteCreatedCopyWithImpl<QuoteCreated>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -261,8 +261,8 @@ class _$_QuoteCreated with DiagnosticableTreeMixin implements _QuoteCreated {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult inital(_QuoteInitial value),
-    @required TResult created(_QuoteCreated value),
+    @required TResult inital(QuoteInitial value),
+    @required TResult created(QuoteCreated value),
   }) {
     assert(inital != null);
     assert(created != null);
@@ -272,8 +272,8 @@ class _$_QuoteCreated with DiagnosticableTreeMixin implements _QuoteCreated {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult inital(_QuoteInitial value),
-    TResult created(_QuoteCreated value),
+    TResult inital(QuoteInitial value),
+    TResult created(QuoteCreated value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -284,10 +284,10 @@ class _$_QuoteCreated with DiagnosticableTreeMixin implements _QuoteCreated {
   }
 }
 
-abstract class _QuoteCreated implements QuoteState {
-  const factory _QuoteCreated(String quote) = _$_QuoteCreated;
+abstract class QuoteCreated implements QuoteState {
+  const factory QuoteCreated(String quote) = _$QuoteCreated;
 
   String get quote;
   @JsonKey(ignore: true)
-  _$QuoteCreatedCopyWith<_QuoteCreated> get copyWith;
+  $QuoteCreatedCopyWith<QuoteCreated> get copyWith;
 }
