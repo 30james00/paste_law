@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:paste_law/cubit/quote_cubit.dart';
 import 'package:paste_law/models/quote.dart';
@@ -97,7 +98,9 @@ class _HomeFormState extends State<HomeForm> {
 
   void submitQuote() {
     _formKey.currentState.save();
+    final text = _quote.toString();
     final quoteCubit = context.read<QuoteCubit>();
-    quoteCubit.setQuote(_quote.toString());
+    quoteCubit.setQuote(text);
+    Clipboard.setData(ClipboardData(text: text));
   }
 }
