@@ -30,7 +30,7 @@ class Quote {
     temp = addNext('art.', art, temp);
     temp = addNext('\u00A7', par, temp);
     temp = addNext('ust.', ust, temp);
-    temp = addNext('pkt ', pkt, temp);
+    temp = addNext('pkt', pkt, temp);
 
     return temp;
   }
@@ -38,7 +38,7 @@ class Quote {
   String addNext(String label, String content, String current) {
     if (!content.isEmpty) {
       if (!current.isEmpty) current += ' ';
-      current += '${label}${content}';
+      current += '${label} ${content}';
     }
     return current;
   }

@@ -23,7 +23,7 @@ void main() {
       pkt: '3',
     );
     String a = quote.toString();
-    expect(a, 'k.k. art.215 \u00A71 ust.2 pkt 3');
+    expect(a, 'k.k. art. 215 \u00A7 1 ust. 2 pkt 3');
   });
 
   test('create partial quote String', () {
@@ -35,7 +35,7 @@ void main() {
       pkt: '3',
     );
     String a = quote.toString();
-    expect(a, 'art.215 \u00A71 ust.2 pkt 3');
+    expect(a, 'art. 215 \u00A7 1 ust. 2 pkt 3');
 
     quote = Quote(
       source: 'kk',
@@ -45,7 +45,7 @@ void main() {
       pkt: '3',
     );
     a = quote.toString();
-    expect(a, 'k.k. art.215 ust.2 pkt 3');
+    expect(a, 'k.k. art. 215 ust. 2 pkt 3');
 
     quote = Quote(
       source: 'kk',
@@ -55,7 +55,7 @@ void main() {
       pkt: '3',
     );
     a = quote.toString();
-    expect(a, 'k.k. art.215 \u00A71 pkt 3');
+    expect(a, 'k.k. art. 215 \u00A7 1 pkt 3');
 
     quote = Quote(
       source: 'kk',
@@ -65,6 +65,6 @@ void main() {
       pkt: '',
     );
     a = quote.toString();
-    expect(a, 'k.k. art.215 \u00A71 ust.2');
+    expect(a, 'k.k. art. 215 \u00A7 1 ust. 2');
   });
 }
