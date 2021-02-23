@@ -20,5 +20,9 @@ void main() {
       act: (cubit) => cubit.setQuote("test"),
       expect: [QuoteState.created("test")],
     );
+
+    tearDown(() {
+      quoteCubit?.close();
+    });
   });
 }

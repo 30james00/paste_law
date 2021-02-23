@@ -22,72 +22,75 @@ class _HomeFormState extends State<HomeForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: [
-          Flexible(
-            child: TextFormField(
-              decoration: InputDecoration(labelText: 'Akt prawny'),
-              onSaved: (value) => _quote = Quote(
-                source: value,
-                art: _quote.art,
-                par: _quote.par,
-                ust: _quote.ust,
-                pkt: _quote.pkt,
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+            Flexible(
+              child: TextFormField(
+                decoration: InputDecoration(labelText: 'Akt prawny'),
+                onSaved: (value) => _quote = Quote(
+                  source: value,
+                  art: _quote.art,
+                  par: _quote.par,
+                  ust: _quote.ust,
+                  pkt: _quote.pkt,
+                ),
               ),
             ),
-          ),
-          Flexible(
-            child: TextFormField(
-              decoration: InputDecoration(labelText: 'art.'),
-              onSaved: (value) => _quote = Quote(
-                source: _quote.source,
-                art: value,
-                par: _quote.par,
-                ust: _quote.ust,
-                pkt: _quote.pkt,
+            Flexible(
+              child: TextFormField(
+                decoration: InputDecoration(labelText: 'art.'),
+                onSaved: (value) => _quote = Quote(
+                  source: _quote.source,
+                  art: value,
+                  par: _quote.par,
+                  ust: _quote.ust,
+                  pkt: _quote.pkt,
+                ),
               ),
             ),
-          ),
-          Flexible(
-            child: TextFormField(
-              decoration: InputDecoration(labelText: '\u00A7'),
-              onSaved: (value) => _quote = Quote(
-                source: _quote.source,
-                art: _quote.art,
-                par: value,
-                ust: _quote.ust,
-                pkt: _quote.pkt,
+            Flexible(
+              child: TextFormField(
+                decoration: InputDecoration(labelText: '\u00A7'),
+                onSaved: (value) => _quote = Quote(
+                  source: _quote.source,
+                  art: _quote.art,
+                  par: value,
+                  ust: _quote.ust,
+                  pkt: _quote.pkt,
+                ),
               ),
             ),
-          ),
-          Flexible(
-            child: TextFormField(
-              decoration: InputDecoration(labelText: 'ust.'),
-              onSaved: (value) => _quote = Quote(
-                source: _quote.source,
-                art: _quote.art,
-                par: _quote.par,
-                ust: value,
-                pkt: _quote.pkt,
+            Flexible(
+              child: TextFormField(
+                decoration: InputDecoration(labelText: 'ust.'),
+                onSaved: (value) => _quote = Quote(
+                  source: _quote.source,
+                  art: _quote.art,
+                  par: _quote.par,
+                  ust: value,
+                  pkt: _quote.pkt,
+                ),
               ),
             ),
-          ),
-          Flexible(
-            child: TextFormField(
-              decoration: InputDecoration(labelText: 'pkt'),
-              onSaved: (value) => _quote = Quote(
-                source: _quote.source,
-                art: _quote.art,
-                par: _quote.par,
-                ust: _quote.ust,
-                pkt: value,
+            Flexible(
+              child: TextFormField(
+                decoration: InputDecoration(labelText: 'pkt'),
+                onSaved: (value) => _quote = Quote(
+                  source: _quote.source,
+                  art: _quote.art,
+                  par: _quote.par,
+                  ust: _quote.ust,
+                  pkt: value,
+                ),
               ),
             ),
-          ),
-          ElevatedButton(onPressed: submitQuote, child: Text("Kopiuj")),
-        ],
+            ElevatedButton(onPressed: submitQuote, child: Text("Kopiuj")),
+          ],
+        ),
       ),
     );
   }
