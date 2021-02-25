@@ -23,6 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  bloc: ^6.1.1
+  flutter_bloc: ^6.1.2
+  freezed_annotation: ^0.12.0
   window_size:
     git: 
       url: git://github.com/google/flutter-desktop-embedding.git
@@ -36,6 +39,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  bloc_test: ^7.1.0
+  build_runner: ^1.11.1
+  freezed: ^0.12.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
