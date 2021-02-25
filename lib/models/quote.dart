@@ -18,19 +18,22 @@ class Quote {
   String toString() {
     String temp = '';
 
-    //convert source to lowercase
-    if (!source.isEmpty) {
-      final a = source.toLowerCase();
-      //divide source by dots
-      for (var i = 0; i < a.length; i++) {
-        temp += a[i] + '.';
-      }
-    }
     //add other symbols
     temp = addNext('art.', art, temp);
     temp = addNext('\u00A7', par, temp);
     temp = addNext('ust.', ust, temp);
     temp = addNext('pkt', pkt, temp);
+
+    //convert source to lowercase
+    if (!source.isEmpty) {
+      final a = source.toLowerCase();
+      //space if needed
+      if (!temp.isEmpty) temp += ' ';
+      //divide source by dots
+      for (var i = 0; i < a.length; i++) {
+        temp += a[i] + '.';
+      }
+    }
 
     return temp;
   }

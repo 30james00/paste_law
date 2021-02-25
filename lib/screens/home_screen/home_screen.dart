@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
                 if (state is QuoteCreated)
                   return Text(state.quote);
                 else
-                  return Text('Wprowadz text');
+                  return Text('Wprowadź text');
               },
             ),
           ],
