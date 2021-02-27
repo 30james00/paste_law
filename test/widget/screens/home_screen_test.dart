@@ -31,6 +31,10 @@ void main() {
     expect(find.byType(Form), findsOneWidget);
     expect(find.byType(TextFormField), findsNWidgets(5));
 
+    //buttons
+    expect(find.byType(ElevatedButton), findsNWidgets(1));
+
+
     //form decorations
     expect(find.text('Akt prawny'), findsOneWidget);
     expect(find.text('art.'), findsOneWidget);

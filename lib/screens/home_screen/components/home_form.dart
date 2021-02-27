@@ -13,13 +13,7 @@ class _HomeFormState extends State<HomeForm> {
   //global key form Form identification
   final _formKey = GlobalKey<FormState>();
 
-  Quote _quote = Quote(
-    source: '',
-    art: '',
-    ust: '',
-    par: '',
-    pkt: '',
-  );
+  Quote _quote = Quote();
 
   @override
   Widget build(BuildContext context) {
@@ -123,16 +117,22 @@ class _HomeFormState extends State<HomeForm> {
                   ),
                 ),
               ),
-              Flexible(
-                child: ElevatedButton(
-                  onPressed: submitQuote,
-                  child: Text("Kopiuj"),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: ElevatedButton(
+                      onPressed: submitQuote,
+                      child: Text("Kopiuj"),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
         ),
       ),
+      //copy Quote on Enter pressed
       onKey: (RawKeyEvent event) {
         if (event.data.physicalKey == PhysicalKeyboardKey.enter) submitQuote();
       },
