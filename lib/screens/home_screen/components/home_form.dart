@@ -30,66 +30,103 @@ class _HomeFormState extends State<HomeForm> {
         child: Column(
           children: [
             Flexible(
-              child: TextFormField(
-                decoration: InputDecoration(labelText: 'Akt prawny'),
-                onSaved: (value) => _quote = Quote(
-                  source: value,
-                  art: _quote.art,
-                  par: _quote.par,
-                  ust: _quote.ust,
-                  pkt: _quote.pkt,
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: const OutlineInputBorder(),
+                    hintText: 'Akt prawny',
+                  ),
+                  onSaved: (value) => _quote = Quote(
+                    source: value,
+                    art: _quote.art,
+                    par: _quote.par,
+                    ust: _quote.ust,
+                    pkt: _quote.pkt,
+                  ),
                 ),
               ),
             ),
             Flexible(
-              child: TextFormField(
-                decoration: InputDecoration(labelText: 'art.'),
-                onSaved: (value) => _quote = Quote(
-                  source: _quote.source,
-                  art: value,
-                  par: _quote.par,
-                  ust: _quote.ust,
-                  pkt: _quote.pkt,
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: const OutlineInputBorder(),
+                    //currently prefix can't be always visible without workaround
+                    //https://github.com/flutter/flutter/issues/19488
+                    hintText: 'art.',
+                  ),
+                  onSaved: (value) => _quote = Quote(
+                    source: _quote.source,
+                    art: value,
+                    par: _quote.par,
+                    ust: _quote.ust,
+                    pkt: _quote.pkt,
+                  ),
                 ),
               ),
             ),
             Flexible(
-              child: TextFormField(
-                decoration: InputDecoration(labelText: '\u00A7'),
-                onSaved: (value) => _quote = Quote(
-                  source: _quote.source,
-                  art: _quote.art,
-                  par: value,
-                  ust: _quote.ust,
-                  pkt: _quote.pkt,
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: const OutlineInputBorder(),
+                    hintText: '\u00A7',
+                  ),
+                  onSaved: (value) => _quote = Quote(
+                    source: _quote.source,
+                    art: _quote.art,
+                    par: value,
+                    ust: _quote.ust,
+                    pkt: _quote.pkt,
+                  ),
                 ),
               ),
             ),
             Flexible(
-              child: TextFormField(
-                decoration: InputDecoration(labelText: 'ust.'),
-                onSaved: (value) => _quote = Quote(
-                  source: _quote.source,
-                  art: _quote.art,
-                  par: _quote.par,
-                  ust: value,
-                  pkt: _quote.pkt,
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: const OutlineInputBorder(),
+                    hintText: 'ust.',
+                  ),
+                  onSaved: (value) => _quote = Quote(
+                    source: _quote.source,
+                    art: _quote.art,
+                    par: _quote.par,
+                    ust: value,
+                    pkt: _quote.pkt,
+                  ),
                 ),
               ),
             ),
             Flexible(
-              child: TextFormField(
-                decoration: InputDecoration(labelText: 'pkt'),
-                onSaved: (value) => _quote = Quote(
-                  source: _quote.source,
-                  art: _quote.art,
-                  par: _quote.par,
-                  ust: _quote.ust,
-                  pkt: value,
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: const OutlineInputBorder(),
+                    hintText: 'pkt',
+                  ),
+                  onSaved: (value) => _quote = Quote(
+                    source: _quote.source,
+                    art: _quote.art,
+                    par: _quote.par,
+                    ust: _quote.ust,
+                    pkt: value,
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(onPressed: submitQuote, child: Text("Kopiuj")),
+            Flexible(
+              child: ElevatedButton(
+                onPressed: submitQuote,
+                child: Text("Kopiuj"),
+              ),
+            ),
           ],
         ),
       ),
