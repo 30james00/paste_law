@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class Quote {
   final String source;
   final String art;
@@ -8,11 +6,11 @@ class Quote {
   final String pkt;
 
   Quote({
-    @required this.source,
-    @required this.art,
-    @required this.par,
-    @required this.ust,
-    @required this.pkt,
+    this.source = '',
+    this.art = '',
+    this.par = '',
+    this.ust = '',
+    this.pkt = '',
   });
 
   String toString() {
