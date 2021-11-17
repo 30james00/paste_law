@@ -24,11 +24,16 @@ void main() {
     expect(find.byType(AppBar), findsOneWidget);
     expect(find.byType(HomeForm), findsOneWidget);
     expect(find.text('Paste Law'), findsOneWidget);
+    expect(find.text('Kopiuj'), findsOneWidget);
     expect(find.text('Wprowadź text'), findsOneWidget);
 
     //form elements
     expect(find.byType(Form), findsOneWidget);
     expect(find.byType(TextFormField), findsNWidgets(5));
+
+    //buttons
+    expect(find.byType(ElevatedButton), findsNWidgets(1));
+
 
     //form decorations
     expect(find.text('Akt prawny'), findsOneWidget);
